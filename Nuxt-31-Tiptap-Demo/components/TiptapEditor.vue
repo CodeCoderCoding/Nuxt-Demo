@@ -41,42 +41,18 @@
       >
         paragraph
       </button>
-      <button
-          @click="editor.chain().focus().toggleHeading({ level: 1 }).run()"
-          :class="{ 'is-active': editor.isActive('heading', { level: 1 }) }"
-      >
-        h1
-      </button>
-      <button
-          @click="editor.chain().focus().toggleHeading({ level: 2 }).run()"
-          :class="{ 'is-active': editor.isActive('heading', { level: 2 }) }"
-      >
-        h2
-      </button>
-      <button
-          @click="editor.chain().focus().toggleHeading({ level: 3 }).run()"
-          :class="{ 'is-active': editor.isActive('heading', { level: 3 }) }"
-      >
-        h3
-      </button>
-      <button
-          @click="editor.chain().focus().toggleHeading({ level: 4 }).run()"
-          :class="{ 'is-active': editor.isActive('heading', { level: 4 }) }"
-      >
-        h4
-      </button>
-      <button
-          @click="editor.chain().focus().toggleHeading({ level: 5 }).run()"
-          :class="{ 'is-active': editor.isActive('heading', { level: 5 }) }"
-      >
-        h5
-      </button>
-      <button
-          @click="editor.chain().focus().toggleHeading({ level: 6 }).run()"
-          :class="{ 'is-active': editor.isActive('heading', { level: 6 }) }"
-      >
-        h6
-      </button>
+
+      <!-- 下拉列表用于选择标题 -->
+      <select @change="setHeading($event.target.value)">
+        <option value="">Select Heading</option>
+        <option value="1">h1</option>
+        <option value="2">h2</option>
+        <option value="3">h3</option>
+        <option value="4">h4</option>
+        <option value="5">h5</option>
+        <option value="6">h6</option>
+      </select>
+
       <button
           @click="editor.chain().focus().toggleBulletList().run()"
           :class="{ 'is-active': editor.isActive('bulletList') }"
