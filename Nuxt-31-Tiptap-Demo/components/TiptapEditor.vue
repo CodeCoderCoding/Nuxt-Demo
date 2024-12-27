@@ -153,5 +153,22 @@ onBeforeUnmount(() => {
 </script>
 
 <style>
-/* Add any custom styles here */
+
+.tiptap{
+
+  code{
+    background-color: #c2c2d0;
+    padding: 1px;
+    border: #9cb7ce;
+  }
+
+  pre {
+    background-color: #c2c2d0; /* 背景色 */
+    padding: 10px;             /* 内边距 */
+    border: 2px solid #9cb7ce; /* 边框 */
+    border-radius: 4px;        /* 圆角效果 */
+    overflow: auto;            /* 处理超出内容，显示滚动条 */
+  }
+
+}
 </style>
